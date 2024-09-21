@@ -19,7 +19,7 @@ class base_Page_Class(object):
 
     def find_An_Element (self, element):
 
-        if (self.check_If_Element_Is_Present(element)):
+        if self.check_If_Element_Is_Present(element):
             return self.driver.find_element(*element)
         else:
             print("element not found ", element)

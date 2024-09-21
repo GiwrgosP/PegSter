@@ -2,7 +2,7 @@
 # import all required frameworks
 
 from pages.login_Page_Class_Web_App import login_Page_Web_App
-from pages.second_Base_Page_Class_Web_App import second_Base_Page_Class
+from pages.customers.customer_Invoices_Class import customer_Invoices_Class
 from utils.selenium_Driver_Handler import driver_Handler
 
 class PegSter_Tester_test(object):
@@ -20,7 +20,7 @@ class PegSter_Tester_test(object):
     def get_To_Some_Where (self):
         del self.test_Prepare
 
-        self.test_Get_To_Some_Where = second_Base_Page_Class(self.driver)
+        self.test_Get_To_Some_Where = customer_Invoices_Class(self.driver,"instrusctios")
 
 def main():
 

@@ -14,9 +14,12 @@ class login_Page_Web_App(base_Page_Class):
     def __init__(self,driver):
         base_Page_Class.__init__(self,driver)
 
-        self.user_Name_Field = self.find_An_Element(login_Page_For_Web_App.user_Name_Field)
-        self.pass_Word_Field = self.find_An_Element(login_Page_For_Web_App.pass_Word_Field)
-        self.submit_Button = self.find_An_Element(login_Page_For_Web_App.submit_Button)
+        self.locators = login_Page_For_Web_App
+
+
+        self.user_Name_Field = self.find_An_Element(self.locators.user_Name_Field)
+        self.pass_Word_Field = self.find_An_Element(self.locators.pass_Word_Field)
+        self.submit_Button = self.find_An_Element(self.locators.submit_Button)
 
     def set_User_Credencials(self,user):
 
@@ -26,16 +29,16 @@ class login_Page_Web_App(base_Page_Class):
     def login_To_Web_App_Function(self):
 
         self.submit_Button.click()
-        wrong_Pass_Word_Message_Box = self.check_If_Element_Is_Present(login_Page_For_Web_App.wrong_Pass_Word_Message_Box)
+        wrong_Pass_Word_Message_Box = self.check_If_Element_Is_Present(self.locators.wrong_Pass_Word_Message_Box)
 
         if (wrong_Pass_Word_Message_Box):
 
-            wrong_Pass_Word_Message_Box_Button = self.find_An_Element(login_Page_For_Web_App.wrong_Pass_Word_Message_Box_Button)
+            wrong_Pass_Word_Message_Box_Button = self.find_An_Element(self.locators.wrong_Pass_Word_Message_Box_Button)
             wrong_Pass_Word_Message_Box_Button.click()
 
             self.submit_Button.click()
 
-            wrong_Pass_Word_Message_Box = self.check_If_Element_Is_Present(login_Page_For_Web_App.wrong_Pass_Word_Message_Box)
+            wrong_Pass_Word_Message_Box = self.check_If_Element_Is_Present(self.locators.wrong_Pass_Word_Message_Box)
 
             if (wrong_Pass_Word_Message_Box):
                 print("Wrong Credencials for login")

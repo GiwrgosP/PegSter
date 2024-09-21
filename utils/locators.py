@@ -36,7 +36,7 @@ class main_Accordion (object):
 class main_Navigation_Options_Base_Class(object):
 
     main_Screen_Top_Tool_Bar_Doc_Item = (By.ID, '_main_d_screen_docitem_top-innerCt')
-    main_Screen_Peg_Tab_Bar = (By.ID, 'peg__main_d_tabbar-innerCt')
+    peg_Tab_Bar = (By.ID, 'peg__main_d_tabbar-innerCt')
 
     #prepei na kanw kai ta upoloipa
     tool_Box_Button = (By.ID, '_main_d_toolbarbutton_140000000000204-btnIconEl')
@@ -58,7 +58,7 @@ class main_Navigation_Options_Base_Class(object):
                         }
     }
 
-class customers_Invoices_List_Class(main_Navigation_Options_Base_Class):
+class customers_Invoices_List_Class(object):
 
     main_Screen_Top_Tool_Bar = (By.ID, 'pegasusToolBar-1416-innerCt')
 
